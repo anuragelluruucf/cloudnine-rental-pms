@@ -1,0 +1,23 @@
+cloudnine:
+  seed:
+    enabled: false
+  ical:
+    scheduling-enabled: false
+  llm:
+    api-key: ""
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:cloudnine;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;LOCK_TIMEOUT=20000
+    driver-class-name: org.h2.Driver
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+  flyway:
+    enabled: false
+
+logging:
+  level:
+    root: warn

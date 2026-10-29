@@ -1,0 +1,40 @@
+server:
+  port: 8088
+  error:
+    include-stacktrace: never
+
+spring:
+  application:
+    name: cloudnine
+  datasource:
+    url: jdbc:h2:file:./data/cloudnine;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;LOCK_TIMEOUT=20000
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: false
+
+cloudnine:
+  jwt:
+    secret: ${JWT_SECRET:dev-only-cloudnine-local-secret-key}
+    ttl-minutes: 720
+  seed:
+    enabled: true
+  ical:
+    scheduling-enabled: true
+    sync-delay-ms: 600000
+    sync-initial-delay-ms: 120000
+  llm:
+    api-key: ${OPENAI_API_KEY:}
+    base-url: ${OPENAI_BASE_URL:https://api.openai.com/v1}
+    model: ${OPENAI_MODEL:gpt-4o-mini}

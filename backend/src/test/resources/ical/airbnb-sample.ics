@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//CloudNine//Sample Airbnb Feed//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:airbnb-sample-001@cloudnine.test
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261109
+SUMMARY:Reserved - Alex Kim
+DESCRIPTION:Airbnb reservation. Guest arrives after 4pm.
+END:VEVENT
+BEGIN:VEVENT
+UID:airbnb-sample-002@cloudnine.test
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261122
+SUMMARY:Reserved - Casey Nguyen
+DESCRIPTION:Folded description on purpose so relaxed unfolding
+  still keeps this sentence together.
+END:VEVENT
+END:VCALENDAR
