@@ -1,0 +1,14 @@
+target/
+node_modules/
+dist/
+data/
+*.log
+.idea/
+*.iml
+.DS_Store
+.env
+.env.*
+coverage/
+.vite/
+*.h2.db
+*.trace.db
