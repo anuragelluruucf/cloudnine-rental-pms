@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>dev.stayledger</groupId>
+    <groupId>dev.cloudnine</groupId>
     <artifactId>cloudnine</artifactId>
     <version>0.1.0</version>
     <name>CloudNine</name>
